@@ -109,4 +109,19 @@ public class Product{
 
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", isActive=" + isActive +
+                ", code=" + code +
+                ", regionId=" + regionId +
+                ", languageId=" + languageId +
+                ", isBad=" + isBad +
+                ", composition='" + composition + '\'' +
+                ", contraindications='" + contraindications + '\'' +
+                ", description='" + description + '\'' +
+                ", descriptionShort='" + descriptionShort + '\'' +
+                '}';
+    }
 }
