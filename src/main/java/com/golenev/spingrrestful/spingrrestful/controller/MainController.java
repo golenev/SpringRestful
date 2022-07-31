@@ -57,19 +57,15 @@ public class MainController {
 
     @GetMapping("{id}")
     public Map<String, String> getById(@PathVariable String id) {
-        return products.stream().filter(product->product.get("id").equals(id)).findFirst().orElseThrow(CustomException::new);
+        return products.stream().filter(product -> product.get("id").equals(id)).findFirst().orElseThrow(CustomException::new);
     }
 
     @PostMapping
-    public Map<String, String> createProduct (@RequestBody Map<String, String> newProduct) {
+    public Map<String, String> createProduct(@RequestBody Map<String, String> newProduct) {
         newProduct.put("id", String.valueOf(counter++));
-    products.add(newProduct);
-    return newProduct;
+        products.add(newProduct);
+        return newProduct;
     }
-
-
-
-
 
 }
 
