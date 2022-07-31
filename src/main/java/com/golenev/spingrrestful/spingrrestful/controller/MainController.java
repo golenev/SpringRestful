@@ -43,16 +43,9 @@ public class MainController {
         }});
     }};
 
-
-    @GetMapping
+     @GetMapping
     public List<Map<String, String>> getList() {
         return products;
-    }
-
-
-    @GetMapping("/")
-    public ResponseEntity main() {
-        return ResponseEntity.ok(getList());
     }
 
     @GetMapping("{id}")
