@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("products")
+@RequestMapping("/api/products")
 public class MainController {
     public int counter = 4;
     public List<Map<String, String>> products = new ArrayList<Map<String, String>>() {{
